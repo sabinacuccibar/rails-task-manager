@@ -1,0 +1,15 @@
+<%= link_to 'Create a new Task', new_path %>
+<h2>My TASKS</h2>
+
+<ul>
+  <% @tasks.each do |task| %>
+  <div style="background-color: lightgrey">
+  <h1><%= task.title %></h1>
+  <%= link_to 'Show details', singleitem_path(task) %>
+  <p> <input type="checkbox"> <% task.completed %> done</p>
+  </div>
+  <% end %>
+</ul>
+
+
+
